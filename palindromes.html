@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //给定⼀个字符串，验证它是否是回⽂串，只考虑字⺟和数字字符，可以忽略字⺟的⼤⼩写 
+        // 输⼊: "A man, a plan, a canal: Panama" 
+        // 输出: true 
+        // 输⼊: "race a car 
+        // 输出: false
+        function palindromes(s){
+            let reg = /[A-Za-z0-9]/g;
+            let str = s.toLowerCase().match(reg).join('');
+            let strrev = s.toLowerCase().match(reg).reverse().join('');
+            return str === strrev;
+        }
+    </script>
+</body>
+</html>
